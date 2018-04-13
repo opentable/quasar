@@ -1,5 +1,6 @@
 buildscript {
     repositories {
+        mavenLocal()
         mavenCentral()
         jcenter()
     }
@@ -22,7 +23,7 @@ subprojects {
     }
 
     group               = "co.paralleluniverse"
-    version             = "0.7.9"
+    version             = "0.7.9.OT-1"
     status              = "integration"
     description         = "Fibers, Channels and Actors for the JVM"
     ext.url             = "http://puniverse.github.com/quasar"
@@ -274,6 +275,7 @@ subprojects {
 
     ///////// Publish Artifacts
     apply plugin: 'maven'
+    apply plugin: 'maven-publish'
     apply plugin: 'signing'
 
     artifacts {
